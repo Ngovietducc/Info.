@@ -1,5 +1,5 @@
 #!/bin/sh
-random(){
+random() {
 	tr </dev/urandom -dc A-Za-z0-9 | head -c5
 	echo
 }
@@ -13,7 +13,7 @@ gen64() {
 }
 install_3proxy() {
     echo "installing 3proxy"
-    URL="https://raw.githubusercontent.com/Ngovietducc/Info./main/3proxy-3proxy-0.8.6.tar.gz"
+    URL="https://raw.githubusercontent.com/quayvlog/quayvlog/main/3proxy-3proxy-0.8.6.tar.gz"
     wget -qO- $URL | bsdtar -xvf-
     cd 3proxy-3proxy-0.8.6
     make -f Makefile.Linux
